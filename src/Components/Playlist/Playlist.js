@@ -4,11 +4,12 @@ import TrackList from './../TrackList/TrackList';
 
 class Playlist extends Component {
   render() {
+    console.log(this.props.playlistTracks);
     return (
-      <div class="Playlist">
+      <div className="Playlist">
         <input value="New Playlist"/>
-        <TrackList/>
-        <a class="Playlist-save">SAVE TO SPOTIFY</a>
+        <TrackList tracks = {this.props.playlistTracks}/>
+        <a className="Playlist-save">SAVE TO SPOTIFY</a>
       </div>
     );
   }
